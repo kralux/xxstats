@@ -8,6 +8,7 @@ COPY . /usr/app/
 
 EXPOSE 7443
 EXPOSE 3000
+RUN yarn
 
 RUN yarn workspace frontend dev
 
