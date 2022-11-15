@@ -15,8 +15,3 @@ EXPOSE 7443
 RUN yarn workspace frontend dev
 
 CMD ["yarn", "start"]
-
-
-failed to deploy a stack: 
-frontend Pulling frontend Error failed to solve:
- executor failed running [/bin/sh -c npm install --global yarn]: exit code: 239
