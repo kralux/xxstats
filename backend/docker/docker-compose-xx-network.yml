@@ -147,7 +147,7 @@ services:
       RANKING_START_DELAY_MS: '60000'          # 1 min
       ACTIVE_ACCOUNTS_START_DELAY_MS: '180000' # 3 min
       ACTIVE_ACCOUNTS_CHUNK_SIZE: '100'
-      SENTRY_DSN: ${SENTRY_DSN}
+      # SENTRY_DSN: ${SENTRY_DSN}
 
   #
   # API
@@ -166,6 +166,23 @@ services:
       - NODE_ENV=production
       - NODE_PORT=8000
 
+  #
+  # Front End
+  #
+  frontend:
+    image: frontend:latest
+    ports:
+      - '7443:7443'
+    build:
+      context: ../../frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - 'postgres'
+    restart: always
+    # environment:
+    #   - NODE_ENV=production
+    #   - NODE_PORT=8000
+      
 #
 # Persistent volumes
 #
