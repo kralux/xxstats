@@ -14,7 +14,7 @@ COPY . /usr/app/frontend
 EXPOSE 7443
 
 RUN yarn install
-RUN npm install --save bignumber.js
+# RUN npm install --save bignumber.js
 # RUN yarn dev
 RUN yarn build
 RUN yarn start
