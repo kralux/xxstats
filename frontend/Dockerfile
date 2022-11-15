@@ -15,7 +15,7 @@ COPY . /usr/app/frontend
 EXPOSE 7443
 
 RUN yarn install
-RUN yarn dev
+# RUN yarn dev
 RUN yarn build
 RUN yarn start
 RUN yarn generate
