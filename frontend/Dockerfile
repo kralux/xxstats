@@ -1,11 +1,11 @@
 FROM node:fermium
 
-WORKDIR /usr/app/api
+WORKDIR /usr/app/frontend
 
-COPY . /usr/app/api
+COPY . /usr/app/frontend
 
-EXPOSE 8000
+EXPOSE 7443
 
-RUN yarn 
+RUN yarn workspace frontend dev
 
 CMD ["yarn", "start"]

@@ -178,10 +178,11 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - 'postgres'
+      - 'api'
     restart: always
-    # environment:
-    #   - NODE_ENV=production
-    #   - NODE_PORT=8000
+    environment:
+      - NODE_ENV=production
+      - NODE_PORT=7443
       
 #
 # Persistent volumes
