@@ -10,6 +10,6 @@ EXPOSE 7443
 EXPOSE 3000
 RUN yarn
 
-RUN yarn workspace frontend generate
+RUN yarn workspace frontend dev
 
 CMD ["yarn", "start"]
